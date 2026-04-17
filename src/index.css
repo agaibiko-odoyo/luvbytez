@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bento-bg: #fff9fb;
+  --color-bento-text: #5d4a4a;
+  --color-card-bg: #ffffff;
+  --color-card-border: rgba(255, 182, 193, 0.2);
+  --color-tag: #ff9fb2;
+  --color-hero-text: #d64d6a;
+  --color-hero-bg: #fff0f3;
+  --color-hug-bg: #fffdf5;
+  --color-note-bg: #fafaff;
+  --color-note-text: #6d6d8a;
+  --color-cal-date: #9e8a8a;
+
+  --font-serif: "Georgia", serif;
+  --font-sans: "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: var(--color-bento-bg);
+  color: var(--color-bento-text);
+  font-family: var(--font-serif);
+}
+
+@layer utilities {
+  .bento-shadow {
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.15);
+  }
+}
+
+@keyframes smooth-fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  15% { opacity: var(--fall-opacity); }
+  85% { opacity: var(--fall-opacity); }
+  100% {
+    transform: translate3d(var(--fall-drift), 110vh, 0) rotate(var(--fall-rotate));
+    opacity: 0;
+  }
+}
+
+.ambient-particle {
+  position: absolute;
+  top: 0;
+  left: var(--fall-left);
+  width: var(--fall-size);
+  height: var(--fall-size);
+  color: var(--color-tag);
+  animation: smooth-fall var(--fall-duration) linear infinite;
+  animation-delay: var(--fall-delay);
+  pointer-events: none;
+  contain: strict;
+}
