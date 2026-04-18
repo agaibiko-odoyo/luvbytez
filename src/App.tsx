@@ -289,7 +289,8 @@ export default function App() {
   src={AUDIO_FILE_PATH} 
   loop 
   controls 
-  preload="metadata"   // helps with loading
+  preload="metadata"
+  style={{ display: 'none' }}  // helps with loading
 />
       </motion.div>
 
