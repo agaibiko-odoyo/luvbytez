@@ -136,16 +136,23 @@ export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(e => console.log("Audio play failed:", e));
-      }
-      setIsPlaying(!isPlaying);
+  const togglePlay = async () => {
+  const audio = audioRef.current;
+  if (!audio) return;
+
+  try {
+    if (isPlaying) {
+      audio.pause();
+      setIsPlaying(false);
+    } else {
+      await audio.play();        // ← use await + try/catch
+      setIsPlaying(true);
     }
-  };
+  } catch (err) {
+    console.error("Audio play failed:", err);
+    // Optional: show a message to user "Click play again" or "Tap to enable sound"
+  }
+};
 
   const toggleMute = () => {
     if (audioRef.current) {
