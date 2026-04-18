@@ -1,11 +1,8 @@
 {
-  "name": "luvbytez",
+  "name": "react-example",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  
-  "homepage": "https://agaibiko-odoyo.github.io/luvbytez",
-
   "scripts": {
     "dev": "tsx server.ts",
     "start": "node server.ts",
@@ -35,8 +32,5 @@
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
-  },
-    "optionalDependencies": {
-    "@rollup/rollup-darwin-arm64": "latest"
   }
 }
