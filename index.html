@@ -1,13 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daily Love Notes</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuvBytez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .hero-bg {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-6xl font-bold mb-4">LuvBytez</h1>
+            <p class="text-2xl mb-8">Where love meets technology</p>
+            <p class="text-xl max-w-2xl mx-auto opacity-90">
+                Creating beautiful digital experiences from Nairobi with passion and precision.
+            </p>
+            <div class="mt-10">
+                <a href="#about" 
+                   class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg inline-block hover:bg-gray-100 transition">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">About LuvBytez</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Hi, I'm Asad from Nairobi. LuvBytez is my creative space where I build modern web experiences, 
+                        tools, and digital products with love and attention to detail.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Passionate about clean code, beautiful design, and solving real problems.
+                    </p>
+                </div>
+                <div class="bg-gray-100 rounded-2xl p-8 text-center">
+                    <div class="text-6xl mb-4">❤️</div>
+                    <p class="text-xl font-medium">Made with love in Nairobi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / What I Do -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">What We Build</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <i class="fas fa-globe text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Modern Websites</h3>
+                    <p class="text-gray-600">Fast, responsive, and beautiful web experiences.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <i class="fas fa-mobile-alt text-4xl text-purple-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Web Applications</h3>
+                    <p class="text-gray-600">Interactive tools and digital products.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <i class="fas fa-heart text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">With Passion</h3>
+                    <p class="text-gray-600">Every project is built with care and love.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="text-2xl mb-4">LuvBytez</p>
+            <p class="text-gray-400 mb-6">Built with ❤️ in Nairobi, Kenya</p>
+            <p class="text-sm text-gray-500">
+                Hosted for free on GitHub Pages • © 2026 Asad
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
